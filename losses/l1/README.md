@@ -1,3 +1,13 @@
+## Formula
+
+$$
+L = \{l_{1}, l_{2}, ... l_{N}\}; \ \ \ \ \ \ l_{n} = |y^{pred}_{n} - y^{true}_{n}| \\
+L1Loss(y^{pred}, y^{true}) = f_{reduce}(L); \ \ \ \ \ \ f_{reduce}\ \epsilon\ \{sum;\ mean;\ None \}
+$$
+
+
+
+
 ## Standard Implementations in ML Frameworks
 - [PyTorch: L1Loss](https://pytorch.org/docs/stable/generated/torch.nn.L1Loss.html)
 - [Keras: MeanAbsoluteError](https://keras.io/api/losses/regression_losses/#meanabsoluteerror-class)

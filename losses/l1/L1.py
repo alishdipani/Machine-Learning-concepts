@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def L1Loss(y_predicted, y_ground_truth, reduction="mean"):
+def L1Loss(y_predicted, y_ground_truth, reduction=None):
     """returns l1 loss between two arrays
 
     :param y_predicted: array of predicted values
@@ -15,7 +15,7 @@ def L1Loss(y_predicted, y_ground_truth, reduction="mean"):
     """
     # Calculate the absolute difference array
     absolute_difference = np.abs(y_predicted - y_ground_truth)
-    # L1 distance is the reduced form of the difference array
+    # L1 distance is the reduced form of the absolute difference array
     if reduction == "sum":
         # Reduction can be done by summing up all the values in the difference array (this is known as "L1-Loss")
         l1_distance = np.sum(absolute_difference)
@@ -24,8 +24,10 @@ def L1Loss(y_predicted, y_ground_truth, reduction="mean"):
         # Reduction can also be done by taking the mean (this is known as "Mean Absolute Error")
         mean_absolute_error = np.mean(absolute_difference)
         return mean_absolute_error
-    else:
+    elif reduction == None:
         return absolute_difference
+    else:
+        print('ValueError: reduction should be "sum" / "mean" / "None"')
 
 
 def main():

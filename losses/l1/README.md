@@ -1,11 +1,6 @@
 ## Formula
 
-$$
-L = \{l_{1}, l_{2}, ... l_{N}\}; \ \ \ \ \ \ l_{n} = |y^{pred}_{n} - y^{true}_{n}| \\
-L1Loss(y^{pred}, y^{true}) = f_{reduce}(L); \ \ \ \ \ \ f_{reduce}\ \epsilon\ \{sum;\ mean;\ None \}
-$$
-
-
+![formulae](./formulae.png)
 
 
 ## Standard Implementations in ML Frameworks

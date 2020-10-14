@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def L1Loss(y_predicted, y_ground_truth, reduction=None):
+def L1Loss(y_predicted, y_ground_truth, reduction="None"):
     """returns l1 loss between two arrays
 
     :param y_predicted: array of predicted values
@@ -24,7 +24,7 @@ def L1Loss(y_predicted, y_ground_truth, reduction=None):
         # Reduction can also be done by taking the mean (this is known as "Mean Absolute Error")
         mean_absolute_error = np.mean(absolute_difference)
         return mean_absolute_error
-    elif reduction == None:
+    elif reduction == "None":
         return absolute_difference
     else:
         print('ValueError: reduction should be "sum" / "mean" / "None"')
@@ -47,7 +47,7 @@ def main():
     )
     y_predicted = np.array(y_predicted)
     y_ground_truth = np.array(y_ground_truth)
-    reduction = str(input('Enter the reduction mode: "sum" / "mean": '))
+    reduction = str(input('Enter the reduction mode: "sum" / "mean" / "None": '))
     loss = L1Loss(y_predicted, y_ground_truth, reduction=reduction)
     print("L1-Loss with {}-reduction: {}".format(reduction, loss))
 

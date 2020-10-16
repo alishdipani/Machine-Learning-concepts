@@ -5,6 +5,7 @@ This repository contains explanation for various Machine Learning and Deep Learn
 - [ ] Sigmoid  
 - [ ] Tanh  
 - [ ] ReLU  
+- [ ] LeakyReLU
 
 ## Optimizers  
 - [ ] Stochastic Gradient Descent
